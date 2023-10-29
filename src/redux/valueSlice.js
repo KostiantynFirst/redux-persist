@@ -4,8 +4,8 @@ export const valueSlice = createSlice({
     name: 'clicks',
     initialState: {value: 0},
     reducers: {
-        update: (state) => {
-            state.value += 1
+        update: (state, action) => {
+            state.value += action.payload;
         },
     }
 });
